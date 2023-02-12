@@ -1,0 +1,108 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    color: #000000;
+    background: linear-gradient(to right, blue, yellow);
+ }
+  
+h2:hover{
+    cursor: pointer;
+    /* color: white;  */
+}
+h2::before{
+    content: "";
+    position: absolute;
+    content: "Beautiful Countries";
+    color: white;
+    transition: 0.3s; 
+    transition-delay: 0.1s;
+    opacity: 1;
+}
+h2:hover::before{
+    transform: translateY(-50px);
+    /* color: red; */
+    opacity: 0;
+}
+h2:hover::after {
+    transform: translateY(-50px);
+    /* color: red; */
+    opacity: 1;
+}
+h2::after{
+    position: absolute;
+    color: white;
+    transition: 0.3s; 
+    transition-delay: 0.3s;
+    opacity: 1;
+}
+
+h2{
+    margin-bottom: 70px;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.countries {
+   padding: 2rem 0;
+}
+
+.header {
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.countries_three {
+   margin: 20px 0;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   font-size: 16px;
+   font-weight: bold;
+}
+
+
+.countries-three::before{
+    content: "";
+    position: absolute;
+    top: 105%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: -1;
+    transition: 0.3s;
+}
+a {
+  cursor: pointer;
+}
+
+a:hover {
+  font-size: 25px;
+  border-bottom: solid 2px #000;
+  transition: 0.3s;
+  color:white;
+  cursor: pointer;
+}
+
+.country {
+  margin: 20px 0;
+  display: grid;
+  grid-template: repeat(1, 250px)/repeat(3, 1fr);
+  gap: 10px;
+  justify-content: space-around;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  
+}
+
+.active {
+  font-size: 18px;
+  border-bottom: solid 2px white;
+}
